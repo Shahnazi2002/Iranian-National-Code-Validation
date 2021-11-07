@@ -1,5 +1,5 @@
 from random import randint
-def vailNationalCode(n):
+def validNationalCode(n):
     digits = list(map(int, f"{n}"))
     length = len(digits)==10
     if length == True :
@@ -61,6 +61,6 @@ def vailNationalCode(n):
 repeat = True
 while repeat :
     generated = randint(0,10000000000)
-    if vailNationalCode(generated) :
+    if validNationalCode(generated) :
         print(generated)
         repeat = False
