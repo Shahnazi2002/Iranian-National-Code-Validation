@@ -1,3 +1,5 @@
+from random import randint
+
 def isValid(national_code):
     digits = [int(digit) for digit in str(national_code).zfill(10)]
     if len(digits) != 10:
@@ -13,3 +15,9 @@ def isValid(national_code):
                 return True
             else:
                 return False
+
+while True:
+    n = randint(10000000, 7400000000)
+    if isValid(n):
+        print(str(n).zfill(10))
+        break
